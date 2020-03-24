@@ -37,3 +37,5 @@ this.http.get(this.FirebaseUrl)
     console.log(postData)
   })
 ```
+
+## Using RxJS Operators to Transform Response Data
