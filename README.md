@@ -25,3 +25,15 @@ this.http.post('https://my-angular-project-64d75.firebaseio.com/posts.json',post
       console.log(responseData)
     })
 ```
+
+## GETing Data
+By get method we can get data but we need to transform this data to show in the app.
+
+### Using the Get method
+
+```typescript
+this.http.get(this.FirebaseUrl)
+  .subscribe((postData)=>{
+    console.log(postData)
+  })
+```
