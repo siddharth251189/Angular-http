@@ -39,3 +39,4 @@ this.http.get(this.FirebaseUrl)
 ```
 
 ## Using RxJS Operators to Transform Response Data
+After geting the data we need to transform the data by RxJS operators.
