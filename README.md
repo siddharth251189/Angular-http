@@ -40,3 +40,22 @@ this.http.get(this.FirebaseUrl)
 
 ## Using RxJS Operators to Transform Response Data
 After geting the data we need to transform the data by RxJS operators.
+First we need to import map from rxjs/operators
+```typescript
+import { map } from 'rxjs/operators';
+```
+
+```typescript
+private fetchPosts(){
+  this.http.get('https://my-angular-project-64d75.firebaseio.com/posts.json')
+  .pipe(map((responseData)=>{
+      const postsArray=[];
+      for(const key in responseData){
+        postsArray.push({...responseData[key],id:key});}
+      return postsArray;
+  }))
+  .subscribe((postData)=>{
+    console.log(postData)
+  })
+}
+```
